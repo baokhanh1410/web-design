@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dynamic DOM Fetch Practice</title>
+  <style>
+    body { font-family: system-ui, sans-serif; padding: 2rem; max-width: 800px; margin: auto; }
+    button { padding: 0.6rem 1.2rem; cursor: pointer; font-size: 1rem; }
+    .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+    .card { border: 1px solid #ddd; border-radius: 8px; padding: 1rem; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+    .card h3 { margin: 0 0 0.5rem 0; font-size: 1.1rem; }
+    .card p { margin: 0.25rem 0; color: #555; font-size: 0.9rem; }
+    .status { margin-top: 1rem; color: #666; font-style: italic; }
+  </style>
+  <script src="app.js" defer></script>
+</head>
+<body>
+
+  <h1>JSONPlaceholder User Directory</h1>
+  <button id="load-btn">Load Users</button>
+  <div id="status" class="status"></div>
+  <div id="card-container" class="card-grid"></div>
+</body>
+</html>
