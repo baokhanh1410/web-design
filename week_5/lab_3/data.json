@@ -1,0 +1,186 @@
+{
+  "model_metadata": {
+    "model_name": "CustomerChurnClassifier_v3",
+    "framework": "XGBoost + LightGBM Ensemble",
+    "trained_at": "2026-08-28T09:30:00Z",
+    "batch_id": "BATCH-20260903-0492",
+    "execution_time_ms": 142.6,
+    "total_records_processed": 6
+  },
+  "prediction_summary": {
+    "high_risk_count": 2,
+    "medium_risk_count": 2,
+    "low_risk_count": 2,
+    "average_confidence": 0.914
+  },
+  "predictions": [
+    {
+      "id": "PRED-1001",
+      "customer_id": "CUST-8842",
+      "customer_name": "Nguyen Van An",
+      "segment": "Enterprise",
+      "predicted_label": "High Churn Risk",
+      "risk_level": "High",
+      "risk_score": 0.88,
+      "confidence": 0.94,
+      "top_features": [
+        {
+          "feature": "contract_remaining_months",
+          "impact": "-3.2",
+          "direction": "negative"
+        },
+        {
+          "feature": "support_tickets_last_30d",
+          "impact": "+4.1",
+          "direction": "positive"
+        },
+        {
+          "feature": "monthly_usage_drop_pct",
+          "impact": "+35%",
+          "direction": "positive"
+        }
+      ],
+      "recommended_action": "Schedule immediate CSM account review & offer renewal incentive"
+    },
+    {
+      "id": "PRED-1002",
+      "customer_id": "CUST-5219",
+      "customer_name": "Tran Thi Mai",
+      "segment": "SMB",
+      "predicted_label": "Low Churn Risk",
+      "risk_level": "Low",
+      "risk_score": 0.12,
+      "confidence": 0.96,
+      "top_features": [
+        {
+          "feature": "daily_active_hours",
+          "impact": "+5.8",
+          "direction": "positive"
+        },
+        {
+          "feature": "nps_satisfaction_score",
+          "impact": "9/10",
+          "direction": "positive"
+        },
+        {
+          "feature": "auto_renew_enabled",
+          "impact": "True",
+          "direction": "positive"
+        }
+      ],
+      "recommended_action": "Eligible for premium tier upsell campaign"
+    },
+    {
+      "id": "PRED-1003",
+      "customer_id": "CUST-7714",
+      "customer_name": "Le Hoang Nam",
+      "segment": "Mid-Market",
+      "predicted_label": "Medium Churn Risk",
+      "risk_level": "Medium",
+      "risk_score": 0.54,
+      "confidence": 0.86,
+      "top_features": [
+        {
+          "feature": "late_payment_count",
+          "impact": "2",
+          "direction": "negative"
+        },
+        {
+          "feature": "feature_adoption_rate",
+          "impact": "42%",
+          "direction": "negative"
+        },
+        {
+          "feature": "contract_remaining_months",
+          "impact": "6",
+          "direction": "neutral"
+        }
+      ],
+      "recommended_action": "Send automated product onboarding guide & payment reminder"
+    },
+    {
+      "id": "PRED-1004",
+      "customer_id": "CUST-3901",
+      "customer_name": "Pham Minh Duc",
+      "segment": "Enterprise",
+      "predicted_label": "High Churn Risk",
+      "risk_level": "High",
+      "risk_score": 0.91,
+      "confidence": 0.95,
+      "top_features": [
+        {
+          "feature": "api_quota_exhaustion",
+          "impact": "+8",
+          "direction": "positive"
+        },
+        {
+          "feature": "executive_sponsor_left",
+          "impact": "True",
+          "direction": "positive"
+        },
+        {
+          "feature": "last_login_days_ago",
+          "impact": "19",
+          "direction": "positive"
+        }
+      ],
+      "recommended_action": "Escalate to VP of Sales for executive re-engagement"
+    },
+    {
+      "id": "PRED-1005",
+      "customer_id": "CUST-6102",
+      "customer_name": "Hoang Bao Chau",
+      "segment": "SMB",
+      "predicted_label": "Low Churn Risk",
+      "risk_level": "Low",
+      "risk_score": 0.08,
+      "confidence": 0.98,
+      "top_features": [
+        {
+          "feature": "seat_expansion_last_quarter",
+          "impact": "+40%",
+          "direction": "positive"
+        },
+        {
+          "feature": "referral_program_member",
+          "impact": "True",
+          "direction": "positive"
+        },
+        {
+          "feature": "monthly_active_users",
+          "impact": "98%",
+          "direction": "positive"
+        }
+      ],
+      "recommended_action": "Invite to join Customer Advisory Board"
+    },
+    {
+      "id": "PRED-1006",
+      "customer_id": "CUST-2450",
+      "customer_name": "Doan Khanh Linh",
+      "segment": "Mid-Market",
+      "predicted_label": "Medium Churn Risk",
+      "risk_level": "Medium",
+      "risk_score": 0.47,
+      "confidence": 0.79,
+      "top_features": [
+        {
+          "feature": "support_tickets_last_30d",
+          "impact": "1",
+          "direction": "neutral"
+        },
+        {
+          "feature": "daily_active_hours",
+          "impact": "-15%",
+          "direction": "negative"
+        },
+        {
+          "feature": "billing_cycle",
+          "impact": "Annual",
+          "direction": "positive"
+        }
+      ],
+      "recommended_action": "Monitor usage patterns over the next 14 business days"
+    }
+  ]
+}
